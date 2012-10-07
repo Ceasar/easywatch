@@ -29,7 +29,7 @@ if __name__ == "__main__":
     def handler(event_type, src_path):
         print event_type
         print src_path
-    easy.watch(".", handler)
+    easywatch.watch(".", handler)
 ```
 
 Note that `src_path` is just the absolute path to the file.
