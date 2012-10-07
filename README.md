@@ -34,4 +34,10 @@ if __name__ == "__main__":
 
 Note that `src_path` is just the absolute path to the file.
 
-And that's pretty much it. If you need more customization, check out `watchdog`, which `easywatch` wraps.
+And that's pretty much it. If you need more customization, check out [watchdog](http://packages.python.org/watchdog/index.html), which `easywatch` wraps.
+
+About using watchdog with editors like Vim
+------------------------------------------
+From the `watchdog` [docs](https://github.com/gorakhargosh/watchdog#about-using-watchdog-with-editors-like-vim):
+
+> Vim does not modify files unless directed to do so. It creates backup files and then swaps them in to replace the files you are editing on the disk. This means that if you use Vim to edit your files, the on-modified events for those files will not be triggered by watchdog. You may need to configure Vim to appropriately to disable this feature.
