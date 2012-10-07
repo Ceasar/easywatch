@@ -26,7 +26,7 @@ def watch(path, handler):
     attrs = {'on_any_event': wrapper}
     EventHandler = type("EventHandler", (FileSystemEventHandler,), attrs)
     observer = Observer()
-    observer.schedule(EventHandler(), path=path)
+    observer.schedule(EventHandler(), path=path, recursive=True)
     observer.start()
     try:
         while True:
