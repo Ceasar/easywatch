@@ -41,3 +41,13 @@ About using watchdog with editors like Vim
 From the `watchdog` [docs](https://github.com/gorakhargosh/watchdog#about-using-watchdog-with-editors-like-vim):
 
 > Vim does not modify files unless directed to do so. It creates backup files and then swaps them in to replace the files you are editing on the disk. This means that if you use Vim to edit your files, the on-modified events for those files will not be triggered by watchdog. You may need to configure Vim to appropriately to disable this feature.
+
+You can get around this by appending the following three lines to your `.vimrc`.
+
+```
+set nobackup " Do not make a backup before overwriting a file
+set nowritebackup " Do not make a backup before overwriting a file
+set noswapfile " Don't create swapfiles
+```
+
+Note, the above is somewhat dangerous. It may be more reasonable to activate the above only when needed.
