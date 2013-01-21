@@ -1,6 +1,7 @@
 from distutils.core import setup
 
-from easywatch import __version__
+__version_info__ = ('0', '0', '2')
+__version__ = '.'.join(__version_info__)
 
 
 setup(
@@ -12,6 +13,7 @@ setup(
     url="https://github.com/Ceasar/easywatch",
     keywords=["directory", "polling", "monitoring"],
     packages=["easywatch"],
+    install_requires=["watchdog"],
     classifiers=[
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
