@@ -5,13 +5,10 @@ easywatch exports just one function, ``watch`` which watches a directory for cha
 
 There are four types of events that the handler can be notified about:
 
-event        description
-===========  ===========
-
-``created``  a file was created
-``deleted``  a file was deleted
-``modified`` a file was modified
-``moved``    a file was moved
+#. ``created``  a file was created
+#. ``deleted``  a file was deleted
+#. ``modified`` a file was modified
+#. ``moved``    a file was moved
 
 For instance:
 
