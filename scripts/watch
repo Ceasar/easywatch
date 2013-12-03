@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+import subprocess
+import sys
+
+import easywatch
+
+
+def main(argv):
+    """Watch the current directory and run argv[1:] on change."""
+    def handler(event_type, src_path):
+        if event_type == "modified":
+            command = " ".join(argv[1:])
+            print command
+            subprocess.call(command, shell=True)
+    easywatch.watch(".", handler)
+
+
+if __name__ == "__main__":
+    main(sys.argv)
