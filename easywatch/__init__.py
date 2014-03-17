@@ -1,1 +1,1 @@
-from easywatch import watch
+from .easywatch import watch
