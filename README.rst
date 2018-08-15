@@ -9,6 +9,16 @@ easywatch
 
 Dead-simple way to watch a directory.
 
+.. code-block:: python
+
+    import easywatch
+
+    if __name__ == "__main__":
+        def handler(event_type, src_path):
+            print event_type
+            print src_path
+        easywatch.watch(".", handler)
+
 Installation
 ------------
 
