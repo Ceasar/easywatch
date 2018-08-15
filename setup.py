@@ -1,7 +1,7 @@
 from distutils.core import setup
 import setuptools
 
-__version_info__ = ('0', '0', '4')
+__version_info__ = ('0', '0', '5')
 __version__ = '.'.join(__version_info__)
 
 
